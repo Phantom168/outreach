@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='assets/css/spinner-style.css' type='text/css'>
+    <link rel='stylesheet' href='assets/css/style.css' type='text/css'>
+</head>
+<body>
+
+    <div id='overlay' style='display:none'>
+        <!-- <div id='spinner'></div> -->
+        <div class="loading">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+    
+      </div>
+      <script type="text/javascript">
+        $('#overlay').show();
+      </script>
+
+
+
+    <div class='wrap'>
+        <section id="hero">
+            <div class="hero-container" data-aos="fade-up">
+            <h1>Share your Achievement with the Outreach Team @ CSE</h1>
+            <h2>Login with your Institute Google ID by clicking the button below</h2>
+            <a onclick='startLoginWithGoogle()' class="btn-get-started scrollto">Login With Google</a>
+            </div>
+        </section>
+    </div>
+
+    
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src='assets/js/script.js' type='text/javascript'></script>
+</body>
+</html>

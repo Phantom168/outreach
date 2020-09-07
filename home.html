@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel='stylesheet' href='assets/css/spinner-style.css' type='text/css'>
+  <link rel='stylesheet' href='assets/css/home-style.css' type='text/css'>
+</head>
+<body onload='loadHome()'>
+
+  <div id='overlay' style='display:none'>
+    <!-- <div id='spinner'></div> -->
+    <div class="loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+    $('#overlay').show();
+  </script>
+
+    <header id="header" class="fixed-top">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 d-flex align-items-center">
+              <!-- <h1 class="logo mr-auto"><a href="index.html">Presento<span>.</span></a></h1> -->
+              <!-- Uncomment below if you prefer to use an image logo -->
+              <a href="#" class="logo mr-auto"><img src="assets/images/CSELogo.png" alt=""></a>
+    
+              <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                  <li class="active"><a href="#header">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#team">Team</a></li>
+                  <!-- <li><a href="blog.html">Blog</a></li> -->
+                  <!-- <li class="drop-down"><a href="">Drop Down</a>
+                    <ul>
+                      <li><a href="#">Drop Down 1</a></li>
+                      <li class="drop-down"><a href="#">Deep Drop Down</a>
+                        <ul>
+                          <li><a href="#">Deep Drop Down 1</a></li>
+                          <li><a href="#">Deep Drop Down 2</a></li>
+                          <li><a href="#">Deep Drop Down 3</a></li>
+                          <li><a href="#">Deep Drop Down 4</a></li>
+                          <li><a href="#">Deep Drop Down 5</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Drop Down 2</a></li>
+                      <li><a href="#">Drop Down 3</a></li>
+                      <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                  </li> -->
+                   <li id='username-placeholder'> </li> 
+                   <img src='' id='user-profile-placeholder'>
+                </ul>
+              </nav><!-- .nav-menu -->
+    
+              <a onclick='signout()' class="get-started-btn scrollto">Sign Out</a>
+            </div>
+          </div>
+    
+        </div>
+      </header><!-- End Header -->
+
+      <main id='wrapper'>
+        
+        <div id='content-overlay' style='display:none'>
+          <!-- <div id='spinner'></div> -->
+          <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <span id='overlay-message'></span>
+          </div>
+      
+        </div>
+
+
+
+
+         <div id="tabs" > <!--class='container col-offset-lg-3 col-lg-6' -->
+          <ul >
+            <li><a href="#tabs-1">Publication</a></li>
+            <li><a href="#tabs-2">Achievement</a></li>
+            <li><a href="#tabs-3">Other</a></li>
+          </ul>
+
+          
+
+
+          <div id='tabs-1' class='container offset-lg-4 col-lg-4'>
+            <form method="post" role="form" class="" id='publication-form' >
+              <div class="form-row">
+                <div class="col-md-12 form-group">
+                  <label for='name'>Name*:</label><br>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='title'>Publication Title/Achievement Name*</label><br>
+                  <input type="text" class="form-control" name="title"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='authors'>Authors and their social media (Twitter/LinkedIn only) handles if applicable</label><br>
+                  <input type="text" class="form-control" name="authors"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='conference-name'>Conference/Journal/Organisation name and it's Twitter/LinkedIn handle if applicable</label><br>
+                  <input type="text" class="form-control" name="conference-name"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='publication-date'>Publication/Acceptance Notification/Acheivement Date* </label><br>
+                  <input type='date' class="form-control col-md-4" name="publication-date"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='useful-links'>Useful links (Paper/ArXiv, Codebase, Project Website, Blogs etc.)</label><br>
+                  <input type="text" class="form-control" name="useful-links"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='thumbnail'>Thumbnail ( A catchy Image/video/GIF/demo if exists)(Max size 2MB)</label><br>
+                  <input type='file' class="form-control" name="thumbnail" id='file-upload'  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='collaboration'>Is it a collaboration? If yes please provide details (industry/institute name in collaboration) </label><br>
+                  <input type="text" class="form-control" name="collaboration"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='hashtags'>Hashtags you want (for a better reach to right audience)  </label><br>
+                  <input type="text" class="form-control" name="hashtags"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+              </div><br>
+  
+  
+  
+              <div class='form-row'>
+                <div class="form-group col-md-12">
+                  <label for='comments'>Other Comments ( Conference/Journal acceptance rate, Splotlight/Poster/Oral presentation etc.)</label>
+                  <textarea class="form-control" name="comments" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <!-- <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div> -->
+                <div class='btn-container'><button type="submit" class='btn btn-success submit-btn'>Submit</button></div>
+              </form>
+            </div>
+
+            <div id='tabs-2' class='container offset-lg-4 col-lg-4'>
+              <form method="post" role="form" class="" id='publication-form' >
+
+
+              </form>
+            </div>
+
+        </div>     
+      </main>
+
+
+
+
+
+
+
+
+      
+    
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <!-- <script src="assets/js/tabulous.js" type="text/javascript"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function($){
+          $('#tabs').tabs();
+        });
+    </script>
+    <script src='assets/js/script.js' type='text/javascript'></script>
+    <script src='assets/js/index.js' type='text/javascript'></script>
+    
+</body>
+</html>
