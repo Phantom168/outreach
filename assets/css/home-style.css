@@ -280,6 +280,7 @@ html{
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
+  cursor:pointer;
 }
 
 .get-started-btn:hover {

@@ -14,9 +14,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 let database = firebase.database();
 let storage = firebase.storage();
+let db = firebase.firestore();
 let storageRef = storage.ref();
 
 firebase.analytics();
+
+console.log(window.location)
 
 let currentUser;
 let iithName;
@@ -35,10 +38,10 @@ firebase.auth().onAuthStateChanged(function(user){
             iithName = currentUser.email.split(/@(iith\.ac\.in|cse\.iith\.ac\.in)$/g)[0];
 
 
-            if(window.location.pathname.split("/").pop() !== 'home.html'){
-                window.location = 'home.html';
+            // if(window.location.pathname.split("/").pop() !== 'home.html'){
+            //     window.location = 'home.html';
                 
-            }
+            // }
 
             let username_el = document.getElementById('username-placeholder');
             username_el.innerHTML = user.displayName;

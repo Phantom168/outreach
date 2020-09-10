@@ -1,47 +1,3 @@
-
-//console.log("cs19btech11047@cse.iiith.ac.in".split(/@(iith\.ac\.in|cse\.iith\.ac\.in)$/g))
-//iithName = firebase.auth().currentUser.email;
-//console.log(iithName)
-// formEl.addEventListener('submit',(e)=>{
-//     e.preventDefault();
-//     console.log(formEl.name,formEl.name.value)
-//     //console.log(document.forms['publication-form'].elements.length)
-//     let form_obj = new Object();
-//     console.log(form_obj)
-//     for(let i =0;i<formEl.elements.length;i++){
-//         console.log(formEl.elements[i].name,formEl.elements[i].value)
-//         form_obj[`${formEl.elements[i].name}`] = formEl.elements[i].value
-//     }
-    
-//     delete form_obj[""];
-//     console.log(form_obj);
-//     let date = new Date()
-//     const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
-//     const selectedFile = document.getElementById('file-upload').files[0];
-//     if(selectedFile.size>1024){
-//         alert("Very large file")
-//     }
-//     let metadata={
-//         name:`${form_obj.name}-${dateString}`
-//     }
-
-//     let fileRef = storageRef.child(`submissions_assets/${metadata.name}`)
-//     let fileURL;
-//     fileRef.put(selectedFile,metadata).then(function(snapshot){
-//         console.log('fileuploaded');
-//         console.log(snapshot)
-//         snapshot.ref.getDownloadURL().then(function(url){
-//             console.log(url)
-//         })
-        
-//     })
-
-    
-    
-    // database.ref('submissions/'+ form_obj['name']).set(form_obj);
-    
-// })
-
 function afterFirebaseLoad(){
     const formEl = document.getElementById('publication-form');
     console.log(iithName)
@@ -106,16 +62,30 @@ function submitPublicationForm(e){
                 console.log(url)
                 form_obj['thumbnail']=url + ' ';
                 console.log(form_obj)
-                database.ref('submissions/'+ metadata.name).set(form_obj);
+                db.collection('publications').doc(metadata.name).set(form_obj)
+                .then(function() {
+                    console.log("Successfully submitted the form");
+                    alert('Form Successfully Submitted');
+                })
+                .catch(function(error) {
+                    console.error("Error writing document: ", error);
+                });
             })
             
         })
     }else{
-        database.ref('submissions/'+ metadata.name).set(form_obj);
+        db.collection('publications').doc(metadata.name).set(form_obj)
+        .then(function() {
+            console.log("Successfully submitted the form");
+            alert('Form Successfully Submitted');
+        })
+        .catch(function(error) {
+            console.error("Error writing document: ", error);
+        });
     }
     $('#content-overlay').fadeOut();
     formEl.reset();
-    alert('Form Successfully Submitted');
+    
     
     
 
