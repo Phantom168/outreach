@@ -20,6 +20,7 @@ let storageRef = storage.ref();
 firebase.analytics();
 
 console.log(window.location)
+console.log(document.documentURI,document.domain,window.location.pathname)
 
 let currentUser;
 let iithName;
@@ -38,10 +39,10 @@ firebase.auth().onAuthStateChanged(function(user){
             iithName = currentUser.email.split(/@(iith\.ac\.in|cse\.iith\.ac\.in)$/g)[0];
 
 
-            // if(window.location.pathname.split("/").pop() !== 'home.html'){
-            //     window.location = 'home.html';
+            if(window.location.pathname.split("/").pop() !== 'home.html'){
+                window.location = 'home.html';
                 
-            // }
+            }
 
             let username_el = document.getElementById('username-placeholder');
             username_el.innerHTML = user.displayName;
@@ -55,7 +56,7 @@ firebase.auth().onAuthStateChanged(function(user){
         }
 
     }else if(!user){
-        if(window.location.pathname.split("/").pop() == 'home.html'){
+        if(window.location.pathname.split("/").pop() !== 'index.html'){
             window.location = 'index.html';
         }
         console.log('Authstatechanged2')
