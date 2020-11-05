@@ -16,6 +16,8 @@ function submitPublicationForm(e){
 
         form_obj[`${formEl.elements[i].name}`] = formEl.elements[i].value
     }
+
+    form_obj['status']='pending';
     
     delete form_obj[""];
 
@@ -24,13 +26,18 @@ function submitPublicationForm(e){
         return
     }
 
+    if(!/\S{2,}/.test(form_obj.phone)){
+        alert("Please Enter your Phone Number");
+        return
+    }
+
     if(!/\S{2,}/.test(form_obj.title)){
         alert("Please Enter a valid Title");
         return
     }
 
-    if(!/\d{2,}-\d{1,}-\d{1,}/.test(form_obj['publication-date'])){
-        alert("Please Input the publication Date");
+    if(!/\d{2,}-\d{1,}-\d{1,}/.test(form_obj['achievement-date'])){
+        alert("Please Input the achievement Date");
         return
     }
     const userUID = `outreach-${currentUser.uid}`;
@@ -62,7 +69,7 @@ function submitPublicationForm(e){
                 console.log(url)
                 form_obj['thumbnail']=url + ' ';
                 console.log(form_obj)
-                db.collection('publications').doc(metadata.name).set(form_obj)
+                db.collection('submissions').doc(metadata.name).set(form_obj)
                 .then(function() {
                     console.log("Successfully submitted the form");
                     alert('Form Successfully Submitted');
@@ -74,7 +81,7 @@ function submitPublicationForm(e){
             
         })
     }else{
-        db.collection('publications').doc(metadata.name).set(form_obj)
+        db.collection('submissions').doc(metadata.name).set(form_obj)
         .then(function() {
             console.log("Successfully submitted the form");
             alert('Form Successfully Submitted');

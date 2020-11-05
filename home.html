@@ -93,116 +93,116 @@
 
 
 
-
-         <div id="tabs" > <!--class='container col-offset-lg-3 col-lg-6' -->
-          <ul >
-            <li><a href="#tabs-1">Publication</a></li>
-            <li><a href="#tabs-2">Achievement</a></li>
-            <li><a href="#tabs-3">Other</a></li>
-          </ul>
-
-          
-
-
           <div id='tabs-1' class='container offset-lg-4 col-lg-4'>
             <form method="post" role="form" class="" id='publication-form' >
-              <div class="form-row">
-                <div class="col-md-12 form-group">
-                  <label for='name'>Name*:</label><br>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+              <fieldset>
+                <legend><h3>Please fill in the details</h3></legend>
+                <div class="form-row">
+                  <div class="col-md-12 form-group">
+                    <label for='name'>Name*:</label><br>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='phone'>Mobile No.(Preferrably Whatsapp)*</label><br>
+                    <input type="number" class="form-control" name="phone"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='title'>Publication Title/Achievement Name*</label><br>
+                    <input type="text" class="form-control" name="title"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='authors'>Authors and their social media (Twitter/LinkedIn only) handles if applicable</label><br>
+                    <input type="text" class="form-control" name="authors"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='organisation-name'>Conference/Journal/Organisation name and it's Twitter/LinkedIn handle if applicable</label><br>
+                    <input type="text" class="form-control" name="organisation-name"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='achievement-date'>Publication/Acceptance Notification/Acheivement Date* </label><br>
+                    <input type='date' class="form-control col-md-4" name="achievement-date"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='useful-links'>Useful links (Paper/ArXiv, Codebase, Project Website, Blogs etc.)</label><br>
+                    <input type="text" class="form-control" name="useful-links"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='thumbnail'>Thumbnail ( A catchy Image/video/GIF/demo if exists)(Max size 2MB)</label><br>
+                    <input type='file' class="form-control" name="thumbnail" id='file-upload'  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='collaboration'>Is it a collaboration? If yes please provide details (industry/institute name in collaboration) </label><br>
+                    <input type="text" class="form-control" name="collaboration"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='hashtags'>Hashtags you want (for a better reach to right audience)  </label><br>
+                    <input type="text" class="form-control" name="hashtags"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                  </div>
+                </div><br>
+    
+    
+    
+                <div class='form-row'>
+                  <div class="form-group col-md-12">
+                    <label for='comments'>Other Comments ( Conference/Journal acceptance rate, Splotlight/Poster/Oral presentation etc.)</label>
+                    <textarea class="form-control" name="comments" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validate"></div>
+                  </div>
                 </div>
-              </div><br>
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='title'>Publication Title/Achievement Name*</label><br>
-                  <input type="text" class="form-control" name="title"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='authors'>Authors and their social media (Twitter/LinkedIn only) handles if applicable</label><br>
-                  <input type="text" class="form-control" name="authors"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='conference-name'>Conference/Journal/Organisation name and it's Twitter/LinkedIn handle if applicable</label><br>
-                  <input type="text" class="form-control" name="conference_name"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='publication-date'>Publication/Acceptance Notification/Acheivement Date* </label><br>
-                  <input type='date' class="form-control col-md-4" name="publication_date"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='useful-links'>Useful links (Paper/ArXiv, Codebase, Project Website, Blogs etc.)</label><br>
-                  <input type="text" class="form-control" name="useful_links"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='thumbnail'>Thumbnail ( A catchy Image/video/GIF/demo if exists)(Max size 2MB)</label><br>
-                  <input type='file' class="form-control" name="thumbnail" id='file-upload'  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='collaboration'>Is it a collaboration? If yes please provide details (industry/institute name in collaboration) </label><br>
-                  <input type="text" class="form-control" name="collaboration"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='hashtags'>Hashtags you want (for a better reach to right audience)  </label><br>
-                  <input type="text" class="form-control" name="hashtags"  placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-              </div><br>
-  
-  
-  
-              <div class='form-row'>
-                <div class="form-group col-md-12">
-                  <label for='comments'>Other Comments ( Conference/Journal acceptance rate, Splotlight/Poster/Oral presentation etc.)</label>
-                  <textarea class="form-control" name="comments" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <!-- <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
-                <div class='btn-container'><button type="submit" class='btn btn-success submit-btn'>Submit</button></div>
+                <!-- <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div> -->
+                  <div class='btn-container'><button type="submit" class='btn btn-success submit-btn'>Submit</button></div>
+              </fieldset>
               </form>
             </div>
 
             <div id='tabs-2' class='container offset-lg-4 col-lg-4'>
               <form method="post" role="form" class="" id='publication-form' >
 
-
               </form>
             </div>
 
-        </div>     
+            
       </main>
 
 
